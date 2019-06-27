@@ -1,0 +1,39 @@
+head
+int choose;
+double number1, number2, result;
+bool exitflag=false;
+def add(in double number1, in double number2, out double result){
+	result = number1+number2;
+}
+def mul(in double number1, in double number2, out double result){
+	result = number1*number2;
+}
+start
+
+while(exitflag == false) do {
+"Scegli il tipo di operazione da eseguire:\n"->;
+"1 - Addizione\n"->;
+"2 - Moltiplicazione:\n"->;
+choose<-;
+
+"Inserisci primo numero:"->;
+number1<-;
+"Inserisci secondo numero:"->;
+number2<-;
+
+if(choose == 1)then{
+	add(number1,number2,result);
+	"", number1, "+", number2, "=", result, "\n"->;
+}
+if(choose == 2)then{
+	mul(number1,number2,result);
+	"", number1, "*", number2, "=", result, "\n"->;
+}
+
+"Cosa vuoi fare? Scegli un opzione\n"->;
+"0 - Altra operazione\n"->;
+"1 - Uscire:\n"->;
+choose<-;
+if(choose == 1) then {exitflag = true;}
+}
+"Ciao!\n"->;

@@ -1,0 +1,14 @@
+cartella:
+- file_es5_c: file C prodotti da yaspl2c.jar
+- file_es5_YASPL: file in YASPL
+- Esercitazione5-EgidioGiacoia.zip: progetto Eclipse
+
+//Definire i permessi
+#chmod 777 yaspl2c.jar
+//Dare in input il programma da compilare in C - per esempio "programma_yaspl.txt"
+#jar -jar yaspl2c.jar programma_yaspl.txt
+//in output crerà 2 file: 
+//-> Albero sintattico: syntaxTree.xml
+//-> programma sorgente in C: source.c
+//compilare con clang per ottenere il programma eseguibile a.out
+#clang source.c
